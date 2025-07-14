@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { Calendar, User, ArrowRight } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
+import { Calendar, User, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ChatWidgets from "@/components/chat-widgets"
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ChatWidgets from "@/components/chat-widgets";
 
 export default function BlogsPage() {
   const blogPosts = [
@@ -75,7 +75,7 @@ export default function BlogsPage() {
       readTime: "9 min read",
       slug: "ip-protection-tech-startups",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -83,17 +83,17 @@ export default function BlogsPage() {
       <Header activeTab="blogs" />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Legal Insights & Updates</h1>
-          <p className="text-xl opacity-90">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Legal Insights & Updates</h1>
+          <p className="text-lg sm:text-xl opacity-90">
             Stay informed with the latest legal developments, startup guidance, and business insights
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar */}
           <div className="lg:col-span-1">
@@ -139,7 +139,7 @@ export default function BlogsPage() {
               {blogPosts.map((post) => (
                 <Card key={post.id} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                    <div className="flex flex-wrap items-center space-x-4 text-sm text-gray-500 mb-3">
                       <div className="flex items-center space-x-1">
                         <Calendar className="h-4 w-4" />
                         <span>{post.date}</span>
@@ -153,15 +153,15 @@ export default function BlogsPage() {
 
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h2 className="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
+                        <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors">
                           <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
                         </h2>
                         <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="bg-blue-100 text-blue-600">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                      <Badge variant="secondary" className="bg-blue-100 text-blue-600 mb-2 sm:mb-0">
                         {post.category}
                       </Badge>
                       <Link
@@ -179,14 +179,14 @@ export default function BlogsPage() {
 
             {/* Pagination */}
             <div className="flex justify-center mt-12">
-              <div className="flex space-x-2">
-                <button className="px-4 py-2 text-gray-500 border border-gray-300 rounded hover:bg-gray-50">
+              <div className="flex space-x-1 sm:space-x-2">
+                <button className="px-3 sm:px-4 py-2 text-gray-500 border border-gray-300 rounded hover:bg-gray-50">
                   Previous
                 </button>
-                <button className="px-4 py-2 bg-blue-600 text-white rounded">1</button>
-                <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">2</button>
-                <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">3</button>
-                <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">
+                <button className="px-3 sm:px-4 py-2 bg-blue-600 text-white rounded">1</button>
+                <button className="px-3 sm:px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">2</button>
+                <button className="px-3 sm:px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">3</button>
+                <button className="px-3 sm:px-4 py-2 text-gray-700 border border-gray-300 rounded hover:bg-gray-50">
                   Next
                 </button>
               </div>
@@ -198,11 +198,6 @@ export default function BlogsPage() {
       {/* Chat Widget */}
       <Footer />
       <ChatWidgets />
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-40">
-        <div className="bg-green-600 text-white px-3 py-8 rounded-l-lg shadow-lg">
-          <div className="transform -rotate-90 whitespace-nowrap text-sm font-bold">Contact</div>
-        </div>
-      </div>
     </div>
-  )
+  );
 }
