@@ -1,9 +1,9 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ChatWidgets from "@/components/chat-widgets"
+import { Button } from "@/components/ui/button";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ChatWidgets from "@/components/chat-widgets";
 
 export default function CareersPage() {
   return (
@@ -12,7 +12,7 @@ export default function CareersPage() {
       <Header activeTab="careers" />
 
       {/* Breadcrumb */}
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="text-sm text-gray-500">
           <Link href="/" className="hover:text-blue-600">
             Home
@@ -23,19 +23,19 @@ export default function CareersPage() {
       </div>
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold">CAREERS</h1>
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl font-bold">CAREERS</h1>
         </div>
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="bg-blue-500 text-white p-6 rounded-lg mb-8">
-              <h3 className="text-xl font-bold mb-4">
+              <h3 className="text-lg sm:text-xl font-bold mb-4">
                 We are always interested in hearing from talented and experienced lawyers at all levels who are looking
                 to Join us. Contact us today.
               </h3>
@@ -60,17 +60,17 @@ export default function CareersPage() {
 
           {/* Content */}
           <div className="lg:col-span-3">
-            <h2 className="text-3xl font-bold text-blue-600 mb-8">Join Our Growing Team</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-8">Join Our Growing Team</h2>
 
             <div className="prose max-w-none">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
                 Startup Solicitors LLP is an international law firm that's ambitious, skilled, and driven by the acumen
                 and intelligence of our growing team. We're looking for talented legal professionals who share our
                 passion for innovation and excellence.
               </p>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-8">
-                <h3 className="text-xl font-semibold text-blue-600 mb-4">What We Offer</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-blue-600 mb-4">What We Offer</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
@@ -99,7 +99,7 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">What We're Looking For</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">What We're Looking For</h3>
 
               <p className="text-gray-700 mb-6">
                 Having the right qualifications and expertise is essential, but we also value candidates who possess
@@ -126,7 +126,7 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Current Openings</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Current Openings</h3>
 
               <div className="space-y-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
@@ -197,11 +197,6 @@ export default function CareersPage() {
       {/* Chat Widget */}
       <Footer />
       <ChatWidgets />
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-40">
-        <div className="bg-green-600 text-white px-3 py-8 rounded-l-lg shadow-lg">
-          <div className="transform -rotate-90 whitespace-nowrap text-sm font-bold">Contact</div>
-        </div>
-      </div>
     </div>
-  )
+  );
 }

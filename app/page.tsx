@@ -69,7 +69,7 @@ export default function HomePage() {
         <Header />
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-8">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar */}
             <aside className="lg:col-span-1">
@@ -106,7 +106,7 @@ export default function HomePage() {
               <YouTubeVideo />
 
               {/* Law Blog Section */}
-              <section aria-labelledby="law-blog-heading">
+              <section aria-labelledby="law-blog-heading" className="mt-8">
                 <h2 id="law-blog-heading" className="text-xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">
                   Law Blog
                 </h2>
@@ -160,7 +160,7 @@ export default function HomePage() {
               <section aria-labelledby="hero-heading">
                 <h1
                   id="hero-heading"
-                  className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-blue-600 mb-8 leading-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-blue-600 mb-8 leading-tight"
                 >
                   Online Legal Support for Doing Business in India
                 </h1>
@@ -248,7 +248,7 @@ export default function HomePage() {
 
           {/* Our Clients Section */}
           <section className="mt-8" aria-labelledby="clients-heading">
-            <h2 id="clients-heading" className="text-3xl font-bold text-center text-blue-600 mb-8">
+            <h2 id="clients-heading" className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-8">
               Our Clients
             </h2>
             <ClientSlider />
