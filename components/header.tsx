@@ -47,7 +47,7 @@ export default function Header({ activeTab }: HeaderProps) {
           Individual
         </div>
         {isIndividualMenuOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/80 backdrop-blur-md border border-gray-200 shadow-lg rounded-md min-w-max z-20 p-4 space-y-2">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-2 gap-x-8 gap-y-2 w-[500px]">
             <Link
               href="/individual/business-setup-services"
               className="block px-3 py-2 hover:bg-blue-600 rounded text-white"
@@ -114,7 +114,7 @@ export default function Header({ activeTab }: HeaderProps) {
           Business
         </div>
         {isBusinessMenuOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/80 backdrop-blur-md border border-gray-200 shadow-lg rounded-md min-w-max max-h-96 overflow-y-auto z-20 p-4 space-y-2">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-3 gap-x-8 gap-y-2 w-[700px]">
             <Link href="/business/accounting-tax-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting and Tax Services</Link>
             <Link href="/business/accounting-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting Services</Link>
             <Link href="/business/arbitration" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Arbitration</Link>
@@ -142,7 +142,7 @@ export default function Header({ activeTab }: HeaderProps) {
       <li className="relative" onMouseEnter={() => setIsAboutMenuOpen(true)} onMouseLeave={() => setIsAboutMenuOpen(false)}>
         <Link href="/about" className={`border-l border-blue-400 text-blue-600 px-3 py-2 ${activeTab === "about" ? "bg-blue-50" : ""}`}>About</Link>
         {isAboutMenuOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/80 backdrop-blur-md border border-gray-200 shadow-lg rounded-md min-w-max z-20 p-4 space-y-2">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md min-w-max z-20 p-4 space-y-2">
             <Link href="/our-team" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Our Team</Link>
           </div>
         )}
