@@ -156,8 +156,10 @@ export default function Header({ activeTab }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4">
+        {/* Top row: Handles mobile header and desktop search bar */}
         <div className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center space-x-2">
+          {/* Logo (for mobile view) */}
+          <Link href="/" className="lg:hidden">
             <Image
               src="/logostart.jpg"
               alt="Startup Solicitors Logo"
@@ -167,38 +169,61 @@ export default function Header({ activeTab }: HeaderProps) {
               className="h-auto"
             />
           </Link>
-          <div className="hidden lg:flex items-center space-x-4">
+          
+          {/* Desktop Search Bar (pushed to the right) */}
+          <div className="hidden lg:flex items-center ml-auto">
             <div className="relative">
-              <Input type="search" placeholder="Search Site" className="w-64 pr-10" />
+              <Input
+                type="search"
+                placeholder="Search Site"
+                className="w-64 pr-10"
+              />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
             </div>
           </div>
+          
+          {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button onClick={toggleMobileMenu} className="text-gray-600 hover:text-gray-800">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-600 hover:text-gray-800"
+            >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex border-b border-blue-400">
-          <ul className="flex space-x-8 py-4 items-center w-full max-w-none">
+        {/* Second row: Desktop Navigation with Logo */}
+        <nav className="hidden lg:flex items-center border-b border-blue-400">
+          <Link href="/" className="flex-shrink-0 mr-8">
+            <Image
+              src="/logostart.jpg"
+              alt="Startup Solicitors Logo"
+              width={200}
+              height={40}
+              priority
+              className="h-auto"
+            />
+          </Link>
+          <ul className="flex space-x-8 py-4 items-center">
             {navLinks}
           </ul>
         </nav>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full h-screen bg-white z-40 overflow-y-auto">
           <div className="container mx-auto px-4 py-4">
             <div className="relative mb-4">
-              <Input type="search" placeholder="Search Site" className="w-full pr-10" />
+              <Input
+                type="search"
+                placeholder="Search Site"
+                className="w-full pr-10"
+              />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
             </div>
-            <ul className="flex flex-col space-y-4">
-              {navLinks}
-            </ul>
+            <ul className="flex flex-col space-y-4">{navLinks}</ul>
           </div>
         </div>
       )}
