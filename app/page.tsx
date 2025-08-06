@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, Users, Globe, Shield, Clock, Star, TrendingUp, Award, Zap } from "lucide-react"
+import { CheckCircle, ArrowRight, Users, Globe, Shield, Clock, Star, TrendingUp, Award, Zap, Calculator, BookOpen, User, Quote } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ChatWidgets from "@/components/chat-widgets";
-// import YouTubeVideo from "@/components/YouTubeVideo";
+import YouTubeVideo from "@/components/YouTubeVideo";
 
 export default function HomePage() {
   const businessTypes = [
@@ -322,59 +322,9 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              {/* <YouTubeVideo /> */}
+              <YouTubeVideo />
 
-              {/* Enhanced Law Blog Section */}
-              {/* <section aria-labelledby="law-blog-heading" className="mt-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="h-1 w-8 bg-gradient-to-r from-blue-600 to-blue-400 rounded"></div>
-                  <h2 id="law-blog-heading" className="text-xl font-bold text-gray-800">
-                    Latest Insights
-                  </h2>
-                </div>
-                <div className="space-y-6">
-                  <Card className="p-4 hover:shadow-md transition-shadow border-l-4 border-l-blue-500">
-                    <time className="text-sm text-gray-500 mb-2 block" dateTime="2025-06-25">
-                      June 25, 2025
-                    </time>
-                    <h3 className="font-semibold mb-2 text-gray-800 leading-tight">
-                      Nominee Director Services in India: Why You Might Need One
-                    </h3>
-                    <Link
-                      href="/blogs/nominee-director-services-in-india"
-                      className="text-blue-600 text-sm hover:text-blue-700 font-medium transition-colors"
-                      aria-label="Read more about nominee director services in India"
-                    >
-                      Read Article →
-                    </Link>
-                  </Card>
-                  <Card className="p-4 hover:shadow-md transition-shadow border-l-4 border-l-green-500">
-                    <time className="text-sm text-gray-500 mb-2 block" dateTime="2025-06-24">
-                      June 24, 2025
-                    </time>
-                    <h3 className="font-semibold mb-2 text-gray-800 leading-tight">
-                      Essential Steps for Foreigners to Set Up a Company in India
-                    </h3>
-                    <Link
-                      href="/blogs/setting-up-company-india-foreigners"
-                      className="text-blue-600 text-sm hover:text-blue-700 font-medium transition-colors"
-                      aria-label="Read more about setting up a company in India for foreigners"
-                    >
-                      Read Article →
-                    </Link>
-                  </Card>
-                </div>
-                <div className="mt-6">
-                  <Link
-                    href="/blogs"
-                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                    aria-label="View all blog posts"
-                  >
-                    View All Articles
-                    <ArrowRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </div>
-              </section> */}
+             
             </aside>
 
             {/* Enhanced Main Content Area */}
@@ -392,7 +342,7 @@ export default function HomePage() {
                     Expert legal support for company incorporation, compliance, and growth. 
                     Start your entrepreneurial journey with confidence.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                     <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                       Start Your Company
                       <ArrowRight className="h-5 w-5 ml-2" />
@@ -403,132 +353,82 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Enhanced Service Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                  <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-amber-500 to-orange-600 text-white border-0 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <CardContent className="p-6 flex flex-col h-full relative z-10">
-                      <div className="flex items-center gap-2 mb-4">
-                        <Users className="h-6 w-6" />
-                        <h2 className="text-xl font-bold">Business Incorporation</h2>
+                {/* Article Card and Cost Calculator Row */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                  {/* Expert Article Card */}
+                  <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50 border-0 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-full -mr-12 -mt-12 opacity-50"></div>
+                    <CardContent className="p-8 relative z-10">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                          <BookOpen className="h-6 w-6 text-white" />
+                        </div>
+                        <Badge className="bg-blue-100 text-blue-700 px-3 py-1 text-sm font-semibold">Expert Insight</Badge>
                       </div>
-                      <ul className="space-y-2 text-sm mb-6 flex-grow text-orange-100" aria-label="Business incorporation services">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Sole Proprietorship
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Partnership/LLP
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Private Limited Company
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Public Company
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Cryptocurrency Trading
-                        </li>
-                      </ul>
-                      <Link href="/services/business-incorporation" passHref>
-                        <Button
-                          variant="outline"
-                          className="w-full text-orange-600 bg-white hover:bg-orange-50 border-0 font-semibold group-hover:shadow-lg transition-all duration-300"
-                          aria-label="Learn more about business incorporation services"
-                        >
-                          Explore Services
-                          <ArrowRight className="h-4 w-4 ml-2" />
-                        </Button>
-                      </Link>
+                      
+                      <div className="mb-6">
+                        <Quote className="h-8 w-8 text-blue-500 mb-4 opacity-50" />
+                        <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6">
+                          "The major problem that multi-million dollar companies face while entering India is choosing the wrong shareholding structure and wrong business structure for company formation..."
+                        </blockquote>
+                      </div>
+
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-12 h-12 bg-gradient-to-r from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
+                          <User className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-800 text-lg">Nipun Khanna</h4>
+                          <p className="text-gray-600 text-sm">Company Formation Expert & Founder</p>
+                        </div>
+                      </div>
+
+                      <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                        Read Full Article
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </Button>
                     </CardContent>
                   </Card>
 
-                  <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-green-500 to-emerald-600 text-white border-0 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <CardContent className="p-6 flex flex-col h-full relative z-10">
-                      <div className="flex items-center gap-2 mb-4">
-                        <Shield className="h-6 w-6" />
-                        <h2 className="text-xl font-bold">Taxation & IPR</h2>
+                  {/* Company Formation Cost Calculator */}
+                  <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-green-50 to-emerald-50 border-0 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-green-200 rounded-full -mr-12 -mt-12 opacity-50"></div>
+                    <CardContent className="p-8 relative z-10">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                          <Calculator className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-800">Cost Calculator</h3>
                       </div>
-                      <ul className="space-y-2 text-sm mb-6 flex-grow text-green-100" aria-label="Taxation and IPR services">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Trademark Registration
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Patent Filing
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Copyright Protection
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Tax Compliance
-                        </li>
-                      </ul>
-                      <Link href="/services/taxation-ipr" passHref>
-                        <Button
-                          variant="outline"
-                          className="w-full text-green-600 bg-white hover:bg-green-50 border-0 font-semibold group-hover:shadow-lg transition-all duration-300"
-                          aria-label="Learn more about taxation and IPR services"
-                        >
-                          Protect Your IP
-                          <Shield className="h-4 w-4 ml-2" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
 
-                  <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-purple-500 to-indigo-600 text-white border-0 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                    <CardContent className="p-6 flex flex-col h-full relative z-10">
-                      <div className="flex items-center gap-2 mb-4">
-                        <Globe className="h-6 w-6" />
-                        <h2 className="text-xl font-bold">Immigration</h2>
+                      <p className="text-gray-600 mb-8 leading-relaxed">
+                        Get an instant estimate for your company formation costs based on your business requirements and structure.
+                      </p>
+
+                      <div className="space-y-4 mb-8">
+                        <div className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
+                          <span className="text-gray-700 font-medium">Private Limited</span>
+                          <span className="text-green-600 font-bold">₹10,000+</span>
+                        </div>
+                        <div className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
+                          <span className="text-gray-700 font-medium">LLP Formation</span>
+                          <span className="text-green-600 font-bold">₹8,000+</span>
+                        </div>
+                        <div className="flex justify-between items-center p-4 bg-white rounded-lg shadow-sm">
+                          <span className="text-gray-700 font-medium">OPC Registration</span>
+                          <span className="text-green-600 font-bold">₹9,000+</span>
+                        </div>
                       </div>
-                      <ul className="space-y-2 text-sm mb-6 flex-grow text-purple-100" aria-label="Immigration services">
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Study Abroad Guidance
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Permanent Residency
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 flex-shrink-0" />
-                          Work Visa Support
-                        </li>
-                      </ul>
-                      <div className="text-sm mb-4 bg-white/20 p-3 rounded-lg">
-                        <a
-                          href="mailto:immigration@startupsolicitors.com"
-                          className="hover:underline flex items-center gap-2"
-                          aria-label="Contact us for immigration services"
-                        >
-                          <Globe className="h-4 w-4" />
-                          immigration@startupsolicitors.com
-                        </a>
-                      </div>
-                      <Link href="/services/immigration" passHref>
-                        <Button
-                          variant="outline"
-                          className="w-full text-purple-600 bg-white hover:bg-purple-50 border-0 font-semibold group-hover:shadow-lg transition-all duration-300"
-                          aria-label="Learn more about immigration services"
-                        >
-                          Global Opportunities
-                          <Globe className="h-4 w-4 ml-2" />
-                        </Button>
-                      </Link>
+
+                      <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                        Calculate Your Cost
+                        <Calculator className="h-4 w-4 ml-2" />
+                      </Button>
                     </CardContent>
                   </Card>
                 </div>
+
+                
               </section>
             </div>
           </div>

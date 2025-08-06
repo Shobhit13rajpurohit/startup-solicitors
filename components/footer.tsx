@@ -154,7 +154,7 @@ const ServiceLinks = ({ title, links }) => (
 );
 
 const lawyersLinks = [
-  { href: "/services/private-limited-company-registration", text: "Private Limited Company Registration" },
+ 
   { href: "/services/company-incorporation", text: "Company Incorporation" },
   { href: "/services/partnership", text: "Partnership" },
   { href: "/services/limited-liability-partnership", text: "Limited Liability Partnership" },
@@ -175,14 +175,6 @@ const lawFirmsLinks = [
   { href: "/law-firms/jaipur/taxation", text: "Taxation Law Firm in Jaipur" },
   { href: "/law-firms/mumbai/corporate", text: "Corporate Law Firm in Mumbai" },
   { href: "/law-firms/mumbai/taxation", text: "Taxation Law Firm in Mumbai" },
-  { href: "/law-firms/mumbai/ipr", text: "IPR Law Firm in Mumbai" },
-  { href: "/lawyers/bangalore", text: "Lawyers in Bangalore" },
-  { href: "/lawyers/mumbai", text: "Lawyers in Mumbai" },
-  { href: "/lawyers/gurgaon", text: "Lawyers in Gurgaon" },
-  { href: "/lawyers/noida", text: "Lawyers in Noida" },
-  { href: "/lawyers/jaipur", text: "Lawyers in Jaipur" },
-  { href: "/lawyers/chandigarh", text: "Lawyers in Chandigarh" },
-  { href: "/lawyers/pune", text: "Lawyers in Pune" },
   { href: "/law-firms", text: "VIEW All →", isViewAll: true },
 ];
 
@@ -191,13 +183,12 @@ const legalAdviceLinks = [
   { href: "/legal-advice/startup-recognition", text: "Startup Recognition" },
   { href: "/legal-advice/startup-services", text: "Startup Services" },
   { href: "/legal-advice/startup-investments", text: "Startup Investments" },
-  { href: "/legal-advice/startup-lawyers", text: "Startup Lawyers" },
+  
   { href: "/legal-advice/trademark-registration", text: "Trademark Registration" },
   { href: "/legal-advice/trademark-objection", text: "Trademark Objection" },
   { href: "/legal-advice/trademark-reply-hearing", text: "Trademark Reply Hearing" },
   { href: "/legal-advice/startup-chartered-accountant", text: "Startup Chartered Accountant" },
-  { href: "/legal-advice/startup-company-secretary", text: "Startup Company Secretary" },
-  { href: "/legal-advice/legal-help-center", text: "Legal Help Center" },
+ 
   { href: "/legal-advice", text: "VIEW All →", isViewAll: true },
 ];
 
@@ -210,5 +201,6 @@ const lawGuidesLinks = [
   { href: "/law-guides/property-law", text: "Property Law" },
   { href: "/law-guides/criminal-law", text: "Criminal Law" },
   { href: "/law-guides/cheque-bounce-law", text: "Cheque Bounce Law" },
+  
   { href: "/law-guides", text: "VIEW All →", isViewAll: true },
 ];

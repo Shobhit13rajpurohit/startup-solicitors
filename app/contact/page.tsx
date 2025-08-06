@@ -22,8 +22,9 @@ export default function ContactPage() {
     service: "",
     message: "",
   });
-  const [formErrors, setFormErrors] = useState({});
+  const [formErrors, setFormErrors] =useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' or 'error'
 
   const validateForm = () => {
     const errors = {};
@@ -40,26 +41,53 @@ export default function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmissionStatus(null);
     const errors = validateForm();
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
     }
+    
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: "",
-    });
-    setFormErrors({});
-    alert("Message sent successfully!");
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "3ff50d20-f9ef-4991-a9e8-331049d87d67", // Your Web3Forms API Key
+          ...formData,
+          subject: `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`,
+        }),
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setSubmissionStatus('success');
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+        setFormErrors({});
+      } else {
+        console.error("Submission Error:", result);
+        setSubmissionStatus('error');
+      }
+    } catch (error) {
+      console.error("Network Error:", error);
+      setSubmissionStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -81,20 +109,17 @@ export default function ContactPage() {
     {
       city: "Jaipur (Head Office)",
       address: "47 B, Shipra Path, SMS Colony, Mansarovar, Jaipur, Rajasthan 302020",
-      mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.186735398593!2d75.76475331508392!3d26.853149983149567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6f0f7e5c3ef%3A0x4e6b7b7e7f7e7f7e!2sShipra%20Path%2C%20Mansarovar%2C%20Jaipur%2C%20Rajasthan%20302020!5e0!3m2!1sen!2sin!4v1635781234567!5m2!1sen!2sin",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.529893475251!2d75.75590357521019!3d26.854438362621085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5d134a41c99%3A0x2897ac1a0d33e70!2sShipra%20Path%2C%20Heera%20Nagar%2C%20Mansarovar%2C%20Jaipur%2C%20Rajasthan%20302020!5e0!3m2!1sen!2sin!4v1722869037803!5m2!1sen!2sin",
     },
     {
       city: "New Delhi",
       address: "9 AVA Apartments, Golflinks, New Delhi 110003",
-      mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.682208394396!2d77.22514531508765!3d28.600594982432123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a99c7b7b7b%3A0x1234567890abcdef!2sGolf%20Links%2C%20New%20Delhi%2C%20Delhi%20110003!5e0!3m2!1sen!2sin!4v1635781234567!5m2!1sen!2sin",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.731763131065!2d77.22851897527636!3d28.607808385311027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2e496350e95%3A0x8efa36c1780f2427!2sGolf%20Links%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1722869123281!5m2!1sen!2sin",
     },
     {
       city: "Mumbai",
       address: "52 Alpha Apartments, Nariman Point Mumbai, Maharashtra 400021",
-      mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.989694055546!2d72.82456231489776!3d18.921663987192456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c6b7b7b7b7%3A0xabcdef1234567890!2sNariman%20Point%2C%20Mumbai%2C%20Maharashtra%20400021!5e0!3m2!1sen!2sin!4v1635781234567!5m2!1sen!2sin",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.847525547535!2d72.82200337500397!3d18.93809295679549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e30a571717%3A0x749c06313b3a3254!2sNariman%20Point%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1722869158580!5m2!1sen!2sin",
     },
   ];
 
@@ -134,6 +159,7 @@ export default function ContactPage() {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       className={`mt-1 ${formErrors.firstName ? "border-red-500" : ""}`}
+                      disabled={isSubmitting}
                     />
                     {formErrors.firstName && <p className="text-red-500 text-sm mt-1">{formErrors.firstName}</p>}
                   </div>
@@ -145,6 +171,7 @@ export default function ContactPage() {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       className={`mt-1 ${formErrors.lastName ? "border-red-500" : ""}`}
+                      disabled={isSubmitting}
                     />
                     {formErrors.lastName && <p className="text-red-500 text-sm mt-1">{formErrors.lastName}</p>}
                   </div>
@@ -158,13 +185,14 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className={`mt-1 ${formErrors.email ? "border-red-500" : ""}`}
+                    disabled={isSubmitting}
                   />
                   {formErrors.email && <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>}
                 </div>
 
                 <div>
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" value={formData.phone} onChange={handleInputChange} className="mt-1" />
+                  <Input id="phone" type="tel" value={formData.phone} onChange={handleInputChange} className="mt-1" disabled={isSubmitting} />
                 </div>
 
                 <div>
@@ -175,12 +203,13 @@ export default function ContactPage() {
                     value={formData.company}
                     onChange={handleInputChange}
                     className="mt-1"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
                   <Label htmlFor="service">Service Required</Label>
-                  <Select onValueChange={handleSelectChange} value={formData.service}>
+                  <Select onValueChange={handleSelectChange} value={formData.service} disabled={isSubmitting}>
                     <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -206,6 +235,7 @@ export default function ContactPage() {
                     className={`mt-1 ${formErrors.message ? "border-red-500" : ""}`}
                     rows={5}
                     placeholder="Please describe your requirements in detail..."
+                    disabled={isSubmitting}
                   />
                   {formErrors.message && <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>}
                 </div>
@@ -217,6 +247,17 @@ export default function ContactPage() {
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
+
+                {submissionStatus === 'success' && (
+                    <p className="text-green-600 text-center font-semibold mt-4">
+                      Thank you! Your message has been sent successfully.
+                    </p>
+                )}
+                {submissionStatus === 'error' && (
+                    <p className="text-red-600 text-center font-semibold mt-4">
+                      Sorry, there was an error sending your message. Please try again later.
+                    </p>
+                )}
               </form>
             </CardContent>
           </Card>
@@ -282,6 +323,7 @@ export default function ContactPage() {
                     </div>
                     <div className="aspect-w-16 aspect-h-9">
                       <iframe
+                        title={`${office.city} Office Location`}
                         src={office.mapUrl}
                         width="100%"
                         height="200"
