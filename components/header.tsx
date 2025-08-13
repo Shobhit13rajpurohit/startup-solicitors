@@ -39,13 +39,15 @@ export default function Header({ activeTab }: HeaderProps) {
         onMouseEnter={() => setIsIndividualMenuOpen(true)}
         onMouseLeave={() => setIsIndividualMenuOpen(false)}
       >
-        <div
-          className={`border-l border-blue-400 text-blue-600 px-3 py-2 cursor-pointer ${
-            activeTab === "individual" ? "bg-blue-50" : ""
-          }`}
-        >
-          Individual
-        </div>
+        <Link href="/individual" passHref>
+          <div
+            className={`border-l border-blue-400 text-blue-600 px-3 py-2 cursor-pointer ${
+              activeTab === "individual" ? "bg-blue-50" : ""
+            }`}
+          >
+            Individual
+          </div>
+        </Link>
         {isIndividualMenuOpen && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-2 gap-x-8 gap-y-2 w-[500px]">
             <Link
@@ -106,13 +108,15 @@ export default function Header({ activeTab }: HeaderProps) {
         onMouseEnter={() => setIsBusinessMenuOpen(true)}
         onMouseLeave={() => setIsBusinessMenuOpen(false)}
       >
-        <div
-          className={`border-l border-blue-400 text-blue-600 px-3 py-2 cursor-pointer ${
-            activeTab === "business" ? "bg-blue-50" : ""
-          }`}
-        >
-          Business
-        </div>
+        <Link href="/business" passHref>
+          <div
+            className={`border-l border-blue-400 text-blue-600 px-3 py-2 cursor-pointer ${
+              activeTab === "business" ? "bg-blue-50" : ""
+            }`}
+          >
+            Business
+          </div>
+        </Link>
         {isBusinessMenuOpen && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-4 gap-x-8 gap-y-2 w-[1000px]">
             <Link href="/business/accounting-tax-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting and Tax Services</Link>

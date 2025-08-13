@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { CheckCircle, ArrowRight, Lightbulb, Trademark, Copyright, FileText } from "lucide-react"
 
+import { ArrowRight, CheckCircle, Copyright, FileText, Lightbulb,  } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/header"
@@ -111,7 +111,7 @@ export default function IntellectualPropertyRightsServicesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <Card className="text-center">
                   <CardContent className="p-6">
-                    <Trademark className="h-12 w-12 text-blue-400 mx-auto mb-4" />
+                    {/* <RegisteredTrademark className="h-12 w-12 text-blue-400 mx-auto mb-4" /> */}
                     <h3 className="font-semibold text-gray-800 mb-2">Trademark Registration</h3>
                     <p className="text-sm text-gray-600">In India and abroad.</p>
                   </CardContent>
