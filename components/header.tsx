@@ -118,7 +118,8 @@ export default function Header({ activeTab }: HeaderProps) {
           </div>
         </Link>
         {isBusinessMenuOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-4 gap-x-8 gap-y-2 w-[1000px]">
+          
+          <div className="absolute top-full left-1/2 -translate-x-1/4 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-4 gap-x-8 gap-y-2 w-[1000px]">
             <Link href="/business/accounting-tax-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting and Tax Services</Link>
             <Link href="/business/accounting-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting Services</Link>
             <Link href="/business/arbitration" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Arbitration</Link>
