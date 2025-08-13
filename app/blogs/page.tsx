@@ -83,7 +83,15 @@ export default function BlogsPage() {
       <Header activeTab="blogs" />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12 sm:py-16">
+      <div
+        className="text-white py-12 sm:py-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1542435503-956c469947f6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2dnaW5nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Legal Insights & Updates</h1>
           <p className="text-lg sm:text-xl opacity-90">

@@ -21,7 +21,15 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12 sm:py-16">
+      <div
+        className="text-white py-12 sm:py-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1652498196118-4577d5f6abd5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjB0ZWFtJTIwb2ZmaWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold">ABOUT</h1>
         </div>

@@ -187,7 +187,15 @@ export default function BusinessSetupIndiaPage() {
       <Header activeTab="business-setup-india" />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20">
+      <div
+        className="text-white py-20"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWElMjBvZmZpY2V8ZW58MHx8MHx8fDA%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Start Your Business in India</h1>
