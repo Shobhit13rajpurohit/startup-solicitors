@@ -29,7 +29,15 @@ export default function ImmigrationServicesForeignDirectorsPage() {
       </div>
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white py-16">
+      <div
+        className="text-white py-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaXZpZHVhbCUyMHByb2Zlc3Npb25hbCUyMHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold">Immigration Services for Foreign Directors</h1>
           <p className="text-xl mt-4 opacity-90">

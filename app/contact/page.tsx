@@ -129,8 +129,16 @@ export default function ContactPage() {
       <Header activeTab="contact" />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16 sm:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <div
+        className="relative text-white py-16 sm:py-20 overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvbnRhY3QlMjB1cyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Let's Connect</h1>
           <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-2xl">

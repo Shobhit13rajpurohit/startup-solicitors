@@ -23,7 +23,15 @@ export default function CareersPage() {
       </div>
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-12 sm:py-16">
+      <div
+        className="text-white py-12 sm:py-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1551766472-62096056b476?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FyZWVycyUyMG9mZmljZSUyMGJ1aWxkaW5nfGVufDB8fDB8fHww')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-bold">CAREERS</h1>
         </div>

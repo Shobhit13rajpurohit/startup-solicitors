@@ -14,7 +14,15 @@ export default function IntellectualPropertyRightsServicesPage() {
       <Header activeTab="business" />
 
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white py-16">
+      <div
+        className="text-white py-16"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1568992688065-536aad8a12f6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3MlMjBtZWV0aW5nJTIwY29sbGFib3JhdGlvbnxlbnwwfHwwfHx8MA%3D%3D')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold">Intellectual Property Rights (IPR) Services</h1>
           <p className="text-xl mt-4 opacity-90">
