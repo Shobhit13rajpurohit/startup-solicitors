@@ -121,19 +121,7 @@ export default function Header({ activeTab }: HeaderProps) {
             <Link href="/business/auditing-assurance" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Auditing and Assurance</Link>
             <Link href="/business/blockchain-cryptocurrency" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Blockchain and Cryptocurrency</Link>
             <Link href="/business/company-formation-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Company Formation Services in India</Link>
-            <Link href="/business/corporate-secretarial-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Corporate Secretarial Services in India</Link>
-            <Link href="/business/cross-border-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Cross-Border Services in India</Link>
-            <Link href="/business/crypto-investment-advisory-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Crypto Investment Advisory Services in India</Link>
-            <Link href="/business/file-tax-returns" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">File Tax Returns</Link>
-            <Link href="/business/immigration" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Immigration</Link>
-            <Link href="/business/investment-advisory-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Investment Advisory Services in India</Link>
-            <Link href="/business/legal-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Legal Services in India</Link>
-            <Link href="/business/regulatory-approvals-compliance" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Regulatory Approvals & Compliance Services in India</Link>
-            <Link href="/business/start-your-business" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Start Your Business</Link>
-            <Link href="/business/startup-business-advisory" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Startup and Business Advisory Services in India</Link>
-            <Link href="/business/virtual-cfo-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Virtual CFO Services in India</Link>
-            <Link href="/business/white-collar-crimes" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">White Collar Crimes</Link>
-          </div>
+           </div>
         )}
       </li>
 
