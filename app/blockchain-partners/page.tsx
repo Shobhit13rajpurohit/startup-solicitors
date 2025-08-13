@@ -82,7 +82,7 @@ export default function BlockchainPartnersPage() {
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">Laxmicoin & Rover Network</h3>
                 <p className="text-gray-700">
-                  Laxmicoin and the "Rover Network" – A decentralized platform for consumers
+                  Laxmicoin and the &quot;Rover Network&quot; – A decentralized platform for consumers
                 </p>
               </div>
             </div>

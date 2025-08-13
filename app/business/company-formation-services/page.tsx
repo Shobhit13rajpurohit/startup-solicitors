@@ -300,7 +300,7 @@ export default function CompanyFormationServicesPage() {
               </div>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-8">
-                <h3 className="text-xl font-semibold text-blue-600 mb-4">What's Included in Our Service</h3>
+                <h3 className="text-xl font-semibold text-blue-600 mb-4">What&apos;s Included in Our Service</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />

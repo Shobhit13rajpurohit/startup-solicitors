@@ -57,9 +57,9 @@ export default function AboutPage() {
 
             <div className="prose max-w-none">
               <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                Startup Solicitors LLP is India's premier <strong>startup law firm</strong>, dedicated to empowering
+                Startup Solicitors LLP is India&apos;s premier <strong>startup law firm</strong>, dedicated to empowering
                 entrepreneurs and businesses with expert legal guidance. Since our inception in 2014, we have been at
-                the forefront of startup legal services, helping over 500 companies navigate India's complex regulatory
+                the forefront of startup legal services, helping over 500 companies navigate India&apos;s complex regulatory
                 landscape.
               </p>
 
@@ -154,7 +154,7 @@ export default function AboutPage() {
               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Solving Present and Future Challenges</h3>
 
               <p className="text-gray-700 mb-6">
-                At Startup Solicitors LLP, we don't just address today's legal challenges—we anticipate tomorrow's
+                At Startup Solicitors LLP, we don&apos;t just address today&apos;s legal challenges—we anticipate tomorrow&apos;s
                 obstacles. Our proactive approach ensures that clients receive guidance that not only resolves immediate
                 concerns but also prepares them for future regulatory changes and compliance requirements.
               </p>
