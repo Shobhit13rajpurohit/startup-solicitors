@@ -64,8 +64,8 @@ export default function CareersPage() {
 
             <div className="prose max-w-none">
               <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                Startup Solicitors LLP is an international law firm that's ambitious, skilled, and driven by the acumen
-                and intelligence of our growing team. We're looking for talented legal professionals who share our
+                Startup Solicitors LLP is an international law firm that&apos;s ambitious, skilled, and driven by the acumen
+                and intelligence of our growing team. We&apos;re looking for talented legal professionals who share our
                 passion for innovation and excellence.
               </p>
 

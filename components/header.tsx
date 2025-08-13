@@ -114,13 +114,23 @@ export default function Header({ activeTab }: HeaderProps) {
           Business
         </div>
         {isBusinessMenuOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-3 gap-x-8 gap-y-2 w-[700px]">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 bg-[#0073aa]/50 backdrop-blur-md border border-gray-200 shadow-lg rounded-md z-20 p-4 grid grid-cols-4 gap-x-8 gap-y-2 w-[1000px]">
             <Link href="/business/accounting-tax-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting and Tax Services</Link>
             <Link href="/business/accounting-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting Services</Link>
             <Link href="/business/arbitration" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Arbitration</Link>
             <Link href="/business/auditing-assurance" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Auditing and Assurance</Link>
             <Link href="/business/blockchain-cryptocurrency" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Blockchain and Cryptocurrency</Link>
             <Link href="/business/company-formation-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Company Formation Services in India</Link>
+            <Link href="/business/visa-immigration-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">VISA & Immigration Services</Link>
+            <Link href="/business/business-setup-india-foreign-nationals" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Business Setup in India for Foreign Nationals</Link>
+            <Link href="/business/licenses-regulatory-approvals" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Licenses & Regulatory Approvals</Link>
+            <Link href="/business/government-funding-subsidies" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Government Funding & Subsidies</Link>
+            <Link href="/business/corporate-law-legal-advisory" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Corporate Law & Legal Advisory</Link>
+            <Link href="/business/arbitration-dispute-resolution" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Arbitration & Dispute Resolution</Link>
+            <Link href="/business/intellectual-property-rights-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Intellectual Property Rights (IPR) Services</Link>
+            <Link href="/business/estate-succession-planning" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Estate & Succession Planning</Link>
+            <Link href="/business/taxation-compliance-services" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Taxation & Compliance Services</Link>
+            <Link href="/business/accounting-internal-auditing" className="block px-3 py-2 hover:bg-blue-600 rounded text-white">Accounting & Internal Auditing</Link>
            </div>
         )}
       </li>
